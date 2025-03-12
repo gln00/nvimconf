@@ -3,22 +3,8 @@ return {
 	config = function()
 		require("mason").setup()
 
--- 	local on_attach = require("plugins.configs.lspconfig").on_attach
--- 	local capabilities = require("plugins.configs.lspconfig").capabilities
--- 	local lspconfig = require "lspconfig"
--- 	local servers = { "yamlls", "bashls", "pyright", "html", "cssls", "jsonls", "dockerls", "terraformls", "ansiblels", "tsserver", "emmet_ls" }
--- 	for _, lsp in ipairs(servers) do
--- 		lspconfig[lsp].setup {
--- 			on_attach = on_attach,
--- 			capabilities = capabilities,
--- 		}
--- 	end
-
 		require("lspconfig").yamlls.setup {}
 		require("lspconfig").bashls.setup {}
-		require("lspconfig").pyright.setup {}
-		require("lspconfig").html.setup {}
-		require("lspconfig").cssls.setup {}
 		require("lspconfig").jsonls.setup {}
 		require("lspconfig").dockerls.setup {}
 		require("lspconfig").terraformls.setup {}

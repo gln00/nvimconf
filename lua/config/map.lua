@@ -23,12 +23,12 @@ map('i', '<C-q>', '<Esc>:wq<CR>')
 map('n', '<C-q>', ':wq<CR>')
 
 -- Move line up 
-map('n' , '<C-Up>', ':m .-2<CR> ==')
-map('i', '<C-Up>', '<ESC>:m .-2<CR> ==')
+map('n' , '<C-Up>','ddkkp')
+map('i', '<C-Up>', '<Esc>ddkkp')
 
 -- Move line down 
-map('i', '<C-Down>', ':m .+1<CR> ==')
-map('n' , '<C-Down>', ':m .+1<CR> ==')
+map('i', '<C-Down>', '<Esc>ddp')
+map('n' , '<C-Down>', 'ddp')
 
 -- BufferNext 
 map('i', '<C-u>', '<Esc>:BufferNext<CR>' )
@@ -41,6 +41,11 @@ map('n', '<C-m>', ':w<CR> :BufferClose<CR>')
 map('i', '<C-n>', '<Esc> :lua require("nvim-tree.api").tree.toggle()<CR>')
 map('n', '<C-n>', ':lua require("nvim-tree.api").tree.toggle()<CR>')
 
--- copy line and paste on next line
-map('i', '<C-d>', '<esc>yyp')
+-- Copy line and paste on next line
+map('i', '<C-d>', '<Esc>yyp')
 map('n', '<C-d>', 'yyp')
+
+map("v", "J", ":m '>+1<CR>gv=gv")
+map("v", "K", ":m '<-2<CR>gv=gv")
+
+map('n', 'm', ':noh<CR>')

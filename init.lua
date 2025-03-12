@@ -5,8 +5,8 @@ require("config.lazy")
 require("config.options")
 require("config.map")
 require("modules.cppterm")
-require("modules.rpage")
 require("modules.comment")
+require("modules.autocmd")
 
 return M
 

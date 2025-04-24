@@ -1,0 +1,3 @@
+-- vim.cmd.highlight("JavaSctiptGetSet", "guifg=#ef9f77")
+-- vim.fn.matchadd("JavaSctiptGetSet", "\\<get\\|\\<set", 20)
+-- vim.fn.matchadd("JavaScriptGetSet", [[\C\<\(get\|set\)\>]], 10, -1, { contains = "NONE", conceal = "NONE" })
